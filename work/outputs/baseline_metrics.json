@@ -1,0 +1,14 @@
+{
+  "base_rate": 0.2864,
+  "precision_at_10": 0.2,
+  "precision_at_100": 0.17,
+  "precision_at_20": 0.2,
+  "precision_at_50": 0.2,
+  "rows": 92548,
+  "score_formula": {
+    "ctr_gap": 0.1,
+    "freshness_risk": 0.25,
+    "position_opportunity": 0.25,
+    "visibility_score": 0.4
+  }
+}
