@@ -1,0 +1,79 @@
+{
+  "dataset": {
+    "partition": "month=2026-03",
+    "total_items": 92548,
+    "total_clients": 40,
+    "overall_base_rate": 0.2864,
+    "train_items": 70017,
+    "train_clients": 32,
+    "test_items": 22531,
+    "test_clients": 8,
+    "test_base_rate": 0.3695
+  },
+  "model_evaluation_honest_holdout": {
+    "roc_auc": 0.5905,
+    "pr_auc": 0.4192,
+    "precision_at_10": 0.5,
+    "precision_at_20": 0.4,
+    "precision_at_50": 0.48,
+    "precision_at_100": 0.51
+  },
+  "baseline_rule_holdout": {
+    "precision_at_10": 0.1,
+    "precision_at_20": 0.1,
+    "precision_at_50": 0.12,
+    "precision_at_100": 0.24
+  },
+  "portfolio_distribution": {
+    "archetypes": {
+      "Striking Distance Opportunity": 29880,
+      "High Decay Watchlist": 23397,
+      "Standard Core Inventory": 19985,
+      "At-Risk Portfolio Pillar": 12098,
+      "Zero-Click Info Asset": 4991,
+      "Stable Core Asset": 1925,
+      "Thin / Zombie Content": 220,
+      "Fading Evergreen": 52
+    },
+    "recommended_actions": {
+      "IMPROVE SNIPPET & CTR": 29880,
+      "INVESTIGATE & MONITOR": 23397,
+      "MONITOR ONLY": 21910,
+      "PROTECT & AUDIT SERP": 12098,
+      "MONITOR INTENT (DO NOT REWRITE)": 4991,
+      "CONSOLIDATE / MERGE or PRUNE": 220,
+      "DEEP REWRITE / REFRESH": 52
+    },
+    "review_priorities": {
+      "P2": 53329,
+      "P3": 27121,
+      "P1": 12098
+    },
+    "triage_tiers": {
+      "Tier 3: Passive Monitoring (No Active Intervention)": 50298,
+      "Tier 1: Quick-Win CTR Optimization (Fast Payoff)": 29880,
+      "Tier 2: High-Touch Pillar Defense (Dual Review Required)": 12098,
+      "Tier 3: Low-Effort Housekeeping (Merge / Prune)": 220,
+      "Tier 2: In-Depth Content Refresh (Medium Payoff)": 52
+    }
+  },
+  "psi_stability": {
+    "imp_obs": 0.0061,
+    "clk_obs": 0.0112,
+    "active_days_obs": 0.1036,
+    "avg_position_obs": 0.3607,
+    "ctr_obs": 0.0047
+  },
+  "reproducibility": {
+    "random_state": 42,
+    "split_method": "GroupShuffleSplit(client_hash_id, test_size=0.20)",
+    "classifier": "LogisticRegression(class_weight='balanced')",
+    "features": [
+      "imp_obs",
+      "clk_obs",
+      "active_days_obs",
+      "avg_position_obs",
+      "ctr_obs"
+    ]
+  }
+}
